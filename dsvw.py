@@ -40,9 +40,13 @@ class ReqHandler(BaseHTTPServer.BaseHTTPRequestHandler):
                     content = subprocess.check_output("nslookup " + params["domain"], shell=True, stderr=subprocess.STDOUT, stdin=subprocess.PIPE)
                 elif "xml" in params:
                     content = lxml.etree.tostring(lxml.etree.parse(cStringIO.StringIO(params["xml"]), lxml.etree.XMLParser(no_network=False)), pretty_print=True)
+
+                    
                 elif "name" in params:
                     found = lxml.etree.parse(cStringIO.StringIO(USERS_XML)).xpath(".//user[name/text()='%s']" % params["name"])
                     content += "<b>Surname:</b> %s%s" % (found[-1].find("surname").text if found else "-", HTML_POSTFIX)
+                
+                
                 elif "size" in params:
                     start, _ = time.time(), "<br>".join("#" * int(params["size"]) for _ in range(int(params["size"])))
                     content += "<b>Time required</b> (to 'resize image' to %dx%d): %.6f seconds%s" % (int(params["size"]), int(params["size"]), time.time() - start, HTML_POSTFIX)
