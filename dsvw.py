@@ -4,12 +4,6 @@ try:
     import lxml.etree
 except ImportError:
     print "[!] please install 'python-lxml' to (also) get access to XML vulnerabilities (e.g. '%s')\n" % ("apt-get install python-lxml" if not subprocess.mswindows else "https://pypi.python.org/pypi/lxml")
-
-    
-    
-    
-    
-    
     
 NAME, VERSION, GITHUB, AUTHOR, LICENSE = "Damn Small Vulnerable Web (DSVW) < 100 LoC (Lines of Code)", "0.1m", "https://github.com/stamparm/DSVW", "Miroslav Stampar (@stamparm)", "Unlicense (public domain)"
 LISTEN_ADDRESS, LISTEN_PORT = "127.0.0.1", 65412
