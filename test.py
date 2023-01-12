@@ -1,7 +1,15 @@
-def foo(x):
-  eval(x)
-  
-a = {"a": input(), "b": "123"}
-foo(a["a"])
-del a["a"]
-foo(a["a"])
+from functools import wraps
+
+def decorator_name(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        eval(args[0])
+        return f(*args, **kwargs)
+    return decorated
+ 
+@decorator_name
+def foo(a):
+    pass
+
+a = input()
+foo(a)
