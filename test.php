@@ -1,12 +1,5 @@
 <?php
 
-class A
-{
-  public $x;
-  public $y;
-}
-
-$a = new A();
-$a->x = $_GET["x"];
-eval($a->y);
-eval($a->x);
+$a = array("1", $_GET["X"], "3");
+eval($a[0]);
+eval($a[1]);
