@@ -1,11 +1,13 @@
 class A {
   public String cmd;
-  public static void foo(A a) {
-    Runtime.getRuntime().exec(a.cmd);
+  public void foo() {
+    Runtime.getRuntime().exec(cmd);
   }
   public static void main(String[] args) {
     A a = new A();
     a.cmd = args[1];
-    foo(a);
+    a.foo();
+    a.cmd = "123";
+    a.foo();
   }
 }
