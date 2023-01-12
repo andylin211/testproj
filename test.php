@@ -1,5 +1,10 @@
 <?php
 
-eval($a);
+function foo($x) {
+  eval($x);
+}
+
 $a = $_GET["x"];
-eval($a);
+foo($a);
+$a = "12";
+foo($a);
