@@ -17,7 +17,7 @@ public class MIAPdfReaderController {
     @GetMapping("/getPdfBin")
     public String getPdfBin(String fileName) throws FileNotFoundException {
         String pdfPath = environment.getProperty("pdf.path");
-        String file = fileName;
+        String file = foo(fileName);
         File pdfFile = new File(System.getProperty("user.dir") + "/" + pdfPath + file);
         return "";
     }
