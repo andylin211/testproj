@@ -1,10 +1,11 @@
 <?php
 
-function foo($x) {
-  eval($x);
+function foo() {
+  global $a;
+  eval($a);
 }
 
 $a = $_GET["x"];
-foo($a);
+foo();
 $a = "12";
-foo($a);
+foo();
