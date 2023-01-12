@@ -1,7 +1,11 @@
-def foo():
-  eval(a)
+class A:
+  cmd = ""
+  cmd2 = ""
 
-a = input()
-foo()
-a = "123"
-foo()
+def foo(x):
+  eval(x)
+  
+a = A()
+a.cmd = input()
+foo(a.cmd)
+foo(a.cmd2)
