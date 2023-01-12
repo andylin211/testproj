@@ -19,7 +19,8 @@ public class MIAPdfReaderController {
         String pdfPath = environment.getProperty("pdf.path");
         Map map = new HashMap();
         map.put("foo", fileName);
-        String file = map.get("foox");
+        String x = "foo";
+        String file = map.get(x);
         File pdfFile = new File(System.getProperty("user.dir") + "/" + pdfPath + file);
         return "";
     }
