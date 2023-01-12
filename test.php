@@ -1,11 +1,12 @@
 <?php
 
-function foo() {
-  global $a;
-  eval($a);
+class A
+{
+  public $x;
+  public $y;
 }
 
-$a = $_GET["x"];
-foo();
-$a = "12";
-foo();
+$a = new A();
+$a->x = $_GET["x"];
+eval($a->y);
+eval($a->x);
