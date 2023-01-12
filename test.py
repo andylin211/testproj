@@ -1,11 +1,6 @@
-class A:
-  cmd = ""
-  cmd2 = ""
-
 def foo(x):
   eval(x)
   
-a = A()
-a.cmd = input()
-foo(a.cmd)
-foo(a.cmd2)
+a = ["123", input(), "3"]
+foo(a[1])
+foo(a[0])
