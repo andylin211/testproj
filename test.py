@@ -1,2 +1,6 @@
-a = input()
-eval(a)
+def foo():
+  eval(a)
+  a = input()
+  eval(a)
+
+foo()
