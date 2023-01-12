@@ -4,8 +4,9 @@ class A {
     Runtime.getRuntime().exec(cmd);
   }
   public static void main(String[] args) {
-    foo();
     cmd = args[1];
+    foo();
+    cmd = "23";
     foo();
   }
 }
