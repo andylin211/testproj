@@ -1,5 +1,7 @@
 package request;
 
+import org.testlib.TestClass;
+
 public class HelloWorld {
     static String source() { return ""; }
     static void sink(String x) {}
@@ -13,5 +15,9 @@ public class HelloWorld {
 
         String bb = sanitize(aa);
         sink(bb);
+        
+        auto c = new TestClass();
+        String d = c.foo(a);
+        sink(d);
     }
 }
