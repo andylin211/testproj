@@ -7,6 +7,7 @@ public class HelloWorld {
     static void sink(String x) {}
     static String spread(String x) { return ""; }
     static void sink2(String x, Map<String, String> m) {}
+    static void sink2(String x, String s) {}
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public static String show(String name) {
