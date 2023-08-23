@@ -16,6 +16,7 @@ public class HelloWorld {
         sink(aa);
 
         sink2(name, null);
+        sink2(name, "");
 
         String bb = sanitize(aa);
         sink(bb);
