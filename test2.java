@@ -14,7 +14,7 @@ public class HelloWorld {
         String aa = spread(a);
         sink(aa);
 
-        sink2(aa);
+        sink2(name);
 
         String bb = sanitize(aa);
         sink(bb);
