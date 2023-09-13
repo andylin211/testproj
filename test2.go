@@ -13,5 +13,5 @@ func entry(w http.ResponseWriter, r *http.Request) {
 
 func (h *Handler) XXXXA(ctx context.Context, req pb.XXXXXB) (pb.XXXXXXC, error) {
 	b := req.source()
-	testlib.sink(bb)
+	testlib.sink(b)
 }
