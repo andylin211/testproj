@@ -14,6 +14,15 @@ func YourHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(out, err)
 	w.Write([]byte(a2))
 }
+
+func YourHandler2(w http.ResponseWriter, r *http.Request) {
+	vars := r.URL.Query()
+	input := vars["name"][0]
+	cmd1 := exec.Command("cmd", "/c", input)
+	out, err := cmd1.CombinedOutput()
+	fmt.Println(out, err)
+	w.Write([]byte(a2))
+}
 func main() {
 	r := mux.NewRouter()
 	// Routes consist of a path and a handler function.
