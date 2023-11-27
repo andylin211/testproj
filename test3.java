@@ -25,6 +25,10 @@ public class Server {
         return exporter;
     }
 
-    // response.addHeader("Access-Control-Allow-Origin", "*");
+    public void test() {
+        
+        response.addHeader("Access-Control-Allow-Origin", "*");
+        
+    }
 
 }
